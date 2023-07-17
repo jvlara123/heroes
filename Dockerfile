@@ -6,7 +6,7 @@ WORKDIR /app
 # install and cache app dependencies
 COPY package.json /app/package.json
 RUN yarn install
-RUN yarn install -g @angular/cli@latest
+# RUN yarn add -g @angular/cli
 
 # add app
 COPY . /app

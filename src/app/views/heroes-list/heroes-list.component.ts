@@ -27,7 +27,7 @@ export class HeroesListComponent {
   @ViewChild(MatSort) sort: MatSort = new MatSort();
   @ViewChild(MatPaginator) paginator :any = MatPaginator;
    
-  displayedColumns: string[] = [ 'id', 'name', 'age', 'power'];
+  displayedColumns: string[] = [ 'id', 'name', 'age', 'power', 'actions'];
   public filter = '';
   public pagination: Pagination = new Pagination(0, 10, 0);
   public tableActions: TableAction[] = [
@@ -36,6 +36,7 @@ export class HeroesListComponent {
   ]
 
   constructor(public dialog: MatDialog, private heroesService: HeroesService, private loadingService: LoadingService, private router: Router) {
+    
     this.getHeroes();
     this.isLoading$ = loadingService.loadingServiceObservable;
     this.pagination$.pipe(tap(pagination => {
