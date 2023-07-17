@@ -1,0 +1,10 @@
+<h1>Heroes</h1>
+<app-table [isPaginateTable]="true" [isFilterTable]=" true" [columns]="displayedColumns" 
+  [actions]="tableActions" [data]="(heroesTable$ | async) || []" [isLoadingData]="(isLoading$ | async) ||false"
+    (executeAction)="executeAction($event)" [pagination]="(pagination$ | async) ">
+</app-table>
+
+<div class="button-container">
+  <button mat-raised-button color="primary" [routerLink]="['hero/create']">Add Hero</button>
+</div>
+  
