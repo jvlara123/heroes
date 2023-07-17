@@ -11,3 +11,6 @@ Also run the mock server automatically
 
 ## Mock server
 Use msw to mock server
+
+## Live demo
+The application is running on url `https://heroes-81623.firebaseapp.com/`
