@@ -31,7 +31,9 @@
     <tr mat-row *matRowDef="let row; columns: columns;"></tr>
 
     <tr class="mat-row" *matNoDataRow>
-      <td class="mat-cell" colspan="4" *ngIf="!isLoadingData && isFilterTable">No Heroes matching the filter"{{filter}}"
+      <td class="mat-cell" colspan="4" *ngIf="!isLoadingData && isFilterTable && filter">No Heroes matching the filter"{{filter}}"
+      </td>
+      <td class="mat-cell" colspan="4" *ngIf="!isLoadingData && !filter">The table has no data
       </td>
       <app-loading [loading]="isLoadingData"></app-loading>
     </tr>
