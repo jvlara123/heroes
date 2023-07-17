@@ -26,5 +26,5 @@
         <input matInput type="text" formControlName="power" required>
     </mat-form-field>
 
-    <button type="submit" mat-raised-button color="primary" [disabled]="!heroForm.valid || (isLoading$ | async)">Edit</button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!heroForm.valid || (isLoading$ | async)">{{isEdition ? 'Edit' : 'Create'}}</button>
 </form>
